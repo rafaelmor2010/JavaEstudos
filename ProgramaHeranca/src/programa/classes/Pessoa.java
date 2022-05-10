@@ -1,6 +1,6 @@
 package programa.classes;
 
-// superclasse Pessoa tem que usar protected
+// superclasse, classe pai, classe master Pessoa tem que usar protected
 public class Pessoa {
 	
 	protected String  nome;

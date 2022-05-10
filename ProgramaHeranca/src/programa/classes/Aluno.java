@@ -3,6 +3,7 @@ package programa.classes;
 import java.util.ArrayList;
 import java.util.List;
 // herança de pessoa utilizando extends
+//classe filha de Pessoa
 public class Aluno  extends Pessoa{
 	//variáveis - atributos do aluno
 	
