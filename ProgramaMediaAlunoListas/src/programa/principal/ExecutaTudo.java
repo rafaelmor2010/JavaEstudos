@@ -25,7 +25,7 @@ public class ExecutaTudo {
 		for(int qtdAluno = 1; qtdAluno <= 2; qtdAluno++ ) {
 			
 			String nome  = JOptionPane.showInputDialog("Digite o nome do aluno número...: "+ qtdAluno);
-		    String sexo  = JOptionPane.showInputDialog("Digite sexo do aluno M (Masculino)  ou F (Feminino): ");
+		    String sexo = JOptionPane.showInputDialog("Digite sexo do aluno M (Masculino)  ou F (Feminino): ");
 		    String idade = JOptionPane.showInputDialog("Digite a idade do aluno: ");
 	     	String dataNascimento  = JOptionPane.showInputDialog("Digite a data nascimento: ");
 	    	String registroGeral  = JOptionPane.showInputDialog("Digite o RG do aluno:");
