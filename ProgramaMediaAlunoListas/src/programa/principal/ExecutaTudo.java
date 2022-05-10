@@ -25,17 +25,17 @@ public class ExecutaTudo {
 		for(int qtdAluno = 1; qtdAluno <= 2; qtdAluno++ ) {
 			
 			String nome  = JOptionPane.showInputDialog("Digite o nome do aluno número...: "+ qtdAluno);
-		String sexo  = JOptionPane.showInputDialog("Digite sexo do aluno M (Masculino)  ou F (Feminino): ");
-		String idade = JOptionPane.showInputDialog("Digite a idade do aluno: ");
-		String dataNascimento  = JOptionPane.showInputDialog("Digite a data nascimento: ");
-		String registroGeral  = JOptionPane.showInputDialog("Digite o RG do aluno:");
+		    String sexo  = JOptionPane.showInputDialog("Digite sexo do aluno M (Masculino)  ou F (Feminino): ");
+		    String idade = JOptionPane.showInputDialog("Digite a idade do aluno: ");
+	     	String dataNascimento  = JOptionPane.showInputDialog("Digite a data nascimento: ");
+	    	String registroGeral  = JOptionPane.showInputDialog("Digite o RG do aluno:");
 			String numeroCpf  = JOptionPane.showInputDialog("Digite o CPF do aluno: ");
 			String nomeMae  = JOptionPane.showInputDialog("Digite nome da mãe: ");
 			String nomePai  = JOptionPane.showInputDialog("Digite nome pai: ");
 			String dataMatricula = JOptionPane.showInputDialog("Digite a data matricula:");
 			String nomeEscola = JOptionPane.showInputDialog("Digite o nome da escola:");
-		String serieMatriculado = JOptionPane.showInputDialog("Digite serie matricula:");
-			//instacinado o objeto Aluno
+		    String serieMatriculado = JOptionPane.showInputDialog("Digite serie matricula:");
+		 	//instacinado o objeto Aluno
 			Aluno aluno1 = new Aluno();
 			
 			aluno1.setNome(nome);
