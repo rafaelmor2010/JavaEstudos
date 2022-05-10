@@ -2,17 +2,10 @@ package programa.classes;
 
 import java.util.ArrayList;
 import java.util.List;
-
-public class Aluno {
+// herança de pessoa utilizando extends
+public class Aluno  extends Pessoa{
 	//variáveis - atributos do aluno
-	private String  nome;
-	private int idade;
-	private char sexo;
-	private String dataNascimento;
-	private String registroGeral;
-	private String numeroCpf;
-	private String nomeMae;
-	private String nomePai;
+	
 	private String dataMatricula;
 	private String nomeEscola;
 	private String serieMatriculado;
