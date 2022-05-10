@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Aluno {
 	//variáveis - atributos do aluno
-	private String nome;
+	private String  nome;
 	private int idade;
 	private char sexo;
 	private String dataNascimento;
