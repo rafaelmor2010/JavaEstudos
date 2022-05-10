@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import java.util.List;
 
+import cursojava.constantes.ConstantesAluno;
+
 public class Aluno {
 
 	private String nome;
@@ -118,11 +120,11 @@ public class Aluno {
 	public String getAlunoAprovado2() {
 		double media = this.getMediaNota();
 		if(media >= 50 & media <= 69) {
-			return "Aluno Recuperação";
+			return ConstantesAluno.RECUPECAO;
 		}else if (media >= 70) {
-			return "Aluno Aprovado";
+			return ConstantesAluno.APROVADO;
 		}else {
-			return "Aluno Reprovado";
+			return ConstantesAluno.REPROVADO;
 		}
 	}
 	
