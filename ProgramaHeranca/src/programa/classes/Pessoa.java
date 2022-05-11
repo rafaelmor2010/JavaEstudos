@@ -1,7 +1,8 @@
 package programa.classes;
 
 // superclasse, classe pai, classe master Pessoa tem que usar protected
-public class Pessoa {
+// abstract impedir  não utilizar essa classe como objeto na classe principal não pode instanciar
+public abstract class Pessoa {
 	
 	protected String  nome;
 	protected int idade;
@@ -11,6 +12,10 @@ public class Pessoa {
 	protected String numeroCpf;
 	protected String nomeMae;
 	protected String nomePai;
+	
+	// método obrigatório pois tem abstract
+	//método abstrato fica sempre na classe pai - é obrigatório utlizar nas classes filhas
+	public abstract double salario();
 	
 	
 	public String getNome() {
@@ -63,6 +68,10 @@ public class Pessoa {
 	}
 	
 	
+	public boolean maiorIdade() {
+		
+		return idade >= 18;
+	}
 	
 
 }

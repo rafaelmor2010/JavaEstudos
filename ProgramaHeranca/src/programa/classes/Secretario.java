@@ -38,7 +38,26 @@ public class Secretario extends Pessoa  {
 				+ ", nomePai=" + nomePai + "]";
 	}
 	
+	//sobrescrevendo da classe pai Pessoa
+	@Override
+	public boolean maiorIdade() {
+		// TODO Auto-generated method stub
+		return super.maiorIdade();
+	}
+	
+	public String msMaiorIdade() {
+		
+		return this.maiorIdade()?"Secretário é maior de idade " : "Secretário é menor de idade";
+	}
+//---------------------------------------------------------------------
+	//sobrescrevendo da classe pai Pessoa
+	@Override
+	public double salario() {
+		
+		return 2500.00;
+	}
 	
 	
-
+	
+	
 }

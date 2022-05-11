@@ -171,6 +171,7 @@ public class Aluno  extends Pessoa{
 		
 	}
 
+	//-----------------TO STRING PARA MOSTRAR NO CONSOLE OS RESULTADOS---------------------------
 	@Override
 	public String toString() {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", sexo=" + sexo + ", dataNascimento=" + dataNascimento
@@ -180,11 +181,28 @@ public class Aluno  extends Pessoa{
 	}
 	
 	
-	//-----------------TO STRING PARA MOSTRAR NO CONSOLE OS RESULTADOS---------------------------
+	//sobrescrevendo da classe pai Pessoa
 	
+ @Override
+public boolean maiorIdade() {
 	
+	return super.maiorIdade();
+}
 	
+	//mensagem de maior idade pegando a Override
+ 
+ public String msMaiorIdade () {
+	 return this.maiorIdade() ? "Aluno é maior de idade " : "Aluno é menor de idade";
+ }
+ 
+ //-----------------------------------------------------------------------------------
+ 
+//sobrescrevendo da classe pai Pessoa
+ @Override
+public double salario() {
 	
+	return 500.00;
+}
 	
 	
 

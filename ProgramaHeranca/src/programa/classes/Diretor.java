@@ -33,6 +33,24 @@ public class Diretor  extends Pessoa{
 				+ nomeMae + ", nomePai=" + nomePai + "]";
 	}
 	
-	
+	//sobrescrevendo da classe pai Pessoa
+	@Override
+	public boolean maiorIdade() {
+		// TODO Auto-generated method stub
+		return super.maiorIdade();
+	}
 
+	
+	public String msMaiorIdade() {
+		
+		return this.maiorIdade()? "Diretor tem maior idade " : "Diretor é menor de idade"; 
+	}
+	
+	//-----------------------------------------------------------------------------------
+	//sobrescrevendo da classe pai Pessoa
+	@Override
+	public double salario() {
+		
+		return 4000.00;
+	}
 }
