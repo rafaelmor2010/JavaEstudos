@@ -10,9 +10,35 @@ import javax.swing.JOptionPane;
 import programa.classes.Aluno;
 import programa.classes.Constantes;
 import programa.classes.Disciplina;
+import programa.classes.Secretario;
+import programa.interfaces.PermitirAcesso;
 
 public class ExecutaTudo {
 	public static void main(String[] args) {
+		
+		// iniciando para menizar erro no sistema try catch
+		try {
+		
+		String login = JOptionPane.showInputDialog("Digite o login ");
+		String senha = JOptionPane.showInputDialog("Digite a senha ");
+		
+		PermitirAcesso secretario = new Secretario();
+		if(secretario.autenticar(login, senha)) {
+		
+		/*
+		Secretario secretario = new Secretario();
+		
+		
+		
+		secretario.setLogin(login);
+		secretario.setSenha(senha);
+		*/
+		//if (secretario.autenticar()) {
+			
+		// se for true ele acessa se false não acessa
+		
+		
+		
 		
 		//instanciando Lista de Aluno
 		List<Aluno> alunos = new ArrayList<Aluno>();
@@ -119,11 +145,40 @@ public class ExecutaTudo {
 			
 			
 			
+		}else {
+			JOptionPane.showMessageDialog(null, "Acesso não permitido");
 		}
 
-	
-	
-
+	 // aqui erro ao processar notas
+		}catch (Exception erro) {
+			//tranalhando com textos - mostrar erros mensagem no sistema no JoptionPane
+			StringBuilder saida = new StringBuilder();
+			
+			erro.printStackTrace();//imprimi no console
+			//messagem de erro ou causa
+			
+			
+			System.out.println("Mensagem de erro ..:"+erro.getMessage());
+			
+			//fazer um for pois comando de tratamento de erro é um array
+			// getStackTrace().length se tiver 10 messagem ele mostra todas
+			for(int pos = 0; pos < erro.getStackTrace().length; pos++) {
+				//imprimi no console
+				System.out.println("Classe de erro..:"+erro.getStackTrace()[pos].getClassName());
+				System.out.println(" Linha de erro..:"+erro.getStackTrace()[pos].getLineNumber());
+				System.out.println(" Método de erro..:"+erro.getStackTrace()[pos].getMethodName());
+				
+				//-------------------Mostra sistema erro mensagem dialog -----------------------------------------------------
+				saida.append("\n Classe de erro..:"+erro.getStackTrace()[pos].getClassName());
+				saida.append("\n Linha de erro..:"+erro.getStackTrace()[pos].getLineNumber());
+				saida.append("\n Método de erro..:"+erro.getStackTrace()[pos].getMethodName());
+				saida.append("\n Método de erro..:"+erro.getClass().getName());
+			}
+			// mostrar no sistema
+			JOptionPane.showMessageDialog(null, "Erro ao processar notas..:"+saida.toString());
+		}
+		
+	}
 	
 		
 	}
